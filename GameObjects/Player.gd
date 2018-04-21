@@ -72,6 +72,7 @@ func aim():
 func fire_bullet():
 	var clone = bullet_scene.instance()
 	var scene_root = get_tree().root.get_children()[0]
-	print("chamou")
+	
 	scene_root.add_child(clone)
 	clone.global_transform = get_node("Head/Camera/Gun_fire_point").global_transform
+	clone.init()
