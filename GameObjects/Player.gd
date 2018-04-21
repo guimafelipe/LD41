@@ -21,7 +21,7 @@ var current_gun = "UNARMED"
 var changing_gun = false
 
 #var bullet_scene = preload("Bullet.tscn")
-var bullet_scene = preload("Burger.tscn")
+var bullet_scene = preload("PizzaBullet.tscn")
 
 
 func _ready():

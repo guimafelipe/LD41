@@ -11,7 +11,8 @@ signal fedWrong
 
 func _ready():
 	$Patience.wait_time = patience
-	myFood = HAMBURGUER
+	randomize()
+	myFood = randi()%3
 	
 	startTimer()
 	#print(self is foodType)

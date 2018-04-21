@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/restaurant.obj-bdb269c1f1b8e4de597e0c644b2c8678.mesh"
+
+[deps]
+
+files=[ "res://.import/restaurant.obj-bdb269c1f1b8e4de597e0c644b2c8678.mesh" ]
+
+source_file="res://Meshes/restaurant.obj"
+source_md5="578de1be4f5395d40da96fa79cfe6286"
+
+dest_files=[ "res://.import/restaurant.obj-bdb269c1f1b8e4de597e0c644b2c8678.mesh", "res://.import/restaurant.obj-bdb269c1f1b8e4de597e0c644b2c8678.mesh" ]
+dest_md5="a204810c24ebd72674718429f6bd5292"
+
+[params]
+
+generate_tangents=true
