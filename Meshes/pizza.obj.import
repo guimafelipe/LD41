@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/pizza.obj-5c890e8d46790ac0f8588a2132fa600c.mesh"
+
+[deps]
+
+files=[ "res://.import/pizza.obj-5c890e8d46790ac0f8588a2132fa600c.mesh" ]
+
+source_file="res://Meshes/pizza.obj"
+source_md5="c7502904a0df44207ed9f82c01739654"
+
+dest_files=[ "res://.import/pizza.obj-5c890e8d46790ac0f8588a2132fa600c.mesh", "res://.import/pizza.obj-5c890e8d46790ac0f8588a2132fa600c.mesh" ]
+dest_md5="5461c59f403d6cf673f30ad6f5a3960f"
+
+[params]
+
+generate_tangents=true

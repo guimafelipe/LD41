@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/counter.obj-d70f1a4a44c6117a21e3b5a3ec9f231c.mesh"
+
+[deps]
+
+files=[ "res://.import/counter.obj-d70f1a4a44c6117a21e3b5a3ec9f231c.mesh" ]
+
+source_file="res://Meshes/counter.obj"
+source_md5="6bea9329dafc74ca088334826c7b60b0"
+
+dest_files=[ "res://.import/counter.obj-d70f1a4a44c6117a21e3b5a3ec9f231c.mesh", "res://.import/counter.obj-d70f1a4a44c6117a21e3b5a3ec9f231c.mesh" ]
+dest_md5="eb8386e84b3a989f839cb8d9475ce49e"
+
+[params]
+
+generate_tangents=true

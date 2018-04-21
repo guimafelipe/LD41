@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/burger.obj-4873acc6c132e537ded4bacc6d0c2dd0.mesh"
+
+[deps]
+
+files=[ "res://.import/burger.obj-4873acc6c132e537ded4bacc6d0c2dd0.mesh" ]
+
+source_file="res://Meshes/burger.obj"
+source_md5="652a2ab6ce273a19e42a894d9e8f6015"
+
+dest_files=[ "res://.import/burger.obj-4873acc6c132e537ded4bacc6d0c2dd0.mesh", "res://.import/burger.obj-4873acc6c132e537ded4bacc6d0c2dd0.mesh" ]
+dest_md5="60ee4b39d313d044ea2aa21fd1dc9cb8"
+
+[params]
+
+generate_tangents=true
