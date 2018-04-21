@@ -21,30 +21,49 @@ var current_gun = "UNARMED"
 var changing_gun = false
 
 #var bullet_scene = preload("Bullet.tscn")
+enum {PIZZA, HAMBURGUER, HOTDOG} #Botar isso numa variável global
 var bullet_scene = preload("PizzaBullet.tscn")
+var bullet_scenes = Array()
+var current_bullet = -1
 
+onready var spawnerClass = preload("res://GameObjects/Spawner.gd")
 
 func _ready():
 	camera_width_center = OS.get_window_size().x / 2
 	camera_height_center = OS.get_window_size().y / 2
+	bullet_scenes.append(load("res://GameObjects/PizzaBullet.tscn"))
+	bullet_scenes.append(load("res://GameObjects/BurguerBullet.tscn"))
+	bullet_scenes.append(load("res://GameObjects/HotdogBullet.tscn"))
 	pass
 
 func _physics_process(delta):
 	aim()
 	
 	if shooting > 0:
-		fire_bullet()
+#		fire_bullet()
 		var space_state = get_world().direct_space_state
 		var result = space_state.intersect_ray(shoot_origin, shoot_normal, [self], 1)
 		var impulse
 		var impact_position
 		if result:
+			print(result.collider)
 			impulse = (result.position - global_transform.origin).normalized()
 			impact_position = result.position
 			var position = result.position - result.collider.global_transform.origin
-			if shooting == 1 and result.collider is RigidBody:
-				result.collider.apply_impulse(position, impulse * 10)
+#			if shooting == 1 and result.collider is RigidBody:
+#				result.collider.apply_impulse(position, impulse * 10)
+			if shooting == 1 and result.collider is spawnerClass:
+				current_bullet = result.collider.foodType
+				load_placeholder()
+			else:
+				fire_bullet()
+		else:
+			fire_bullet()
 	shooting = 0
+
+func load_placeholder():
+	# check current_bullet value and load correspondent placeholder
+	pass
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -71,9 +90,12 @@ func aim():
 		camera_change = Vector2()
 
 func fire_bullet():
-	var clone = bullet_scene.instance()
+	if current_bullet == -1:
+		return
+	var clone = bullet_scenes[current_bullet].instance()
 	var scene_root = get_tree().root.get_children()[0]
 	
 	scene_root.add_child(clone)
 	clone.global_transform = get_node("Head/Camera/Gun_fire_point").global_transform
 	clone.init()
+	current_bullet = -1
