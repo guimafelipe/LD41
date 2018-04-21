@@ -1,6 +1,8 @@
 
 extends RigidBody
 
+enum {PIZZA, HAMBURGUER, HOTDOG}
+var foodClass
 
 #const BULLET_SPEED = 80
 const KILL_TIMER = 4 #tempo pra bala sumir
