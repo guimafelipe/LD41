@@ -68,8 +68,13 @@ func _physics_process(delta):
 
 func load_placeholder():
 	# check current_bullet value and load correspondent placeholder
+	
+	var phld_point = $Head/Camera/PlaceholderPoint
+	if phld_point.get_child_count() > 0: #deveria sempre ser o caso
+		phld_point.get_child(0).queue_free()
+	
 	var ph = bullet_placeholders[current_bullet].instance()
-	$Head/Camera/PlaceholderPoint.add_child(ph)
+	phld_point.add_child(ph)
 	pass
 
 func _input(event):
@@ -101,12 +106,16 @@ func fire_bullet():
 		return
 	var clone = bullet_scenes[current_bullet].instance()
 	current_bullet = -1
-	var phld_point = $Head/Camera/PlaceholderPoint
-	if phld_point.get_child_count() > 0: #deveria sempre ser o caso
-		phld_point.get_child(0).queue_free()
+	
+	remove_placeholder()
 	
 	var scene_root = get_tree().root.get_children()[0]
 	
 	scene_root.add_child(clone)
 	clone.global_transform = get_node("Head/Camera/Gun_fire_point").global_transform
 	clone.init()
+
+func remove_placeholder():
+	var phld_point = $Head/Camera/PlaceholderPoint
+	if phld_point.get_child_count() > 0: #deveria sempre ser o caso
+		phld_point.get_child(0).queue_free()
