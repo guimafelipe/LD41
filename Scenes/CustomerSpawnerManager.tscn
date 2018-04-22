@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Scripts/CustomerSpawnerManager.gd" type="Script" id=1]
 
-
-
 [node name="CustomerSpawnerManager" type="Spatial"]
 
 script = ExtResource( 1 )

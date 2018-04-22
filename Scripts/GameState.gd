@@ -14,5 +14,5 @@ func _process(delta):
 	for i in range(difficulty_map.size()):
 		if(current_time >= difficulty_map[i]):
 			new_diff = i
-#	assert(difficulty <= 3)
+	assert(difficulty <= GlobalData.max_difficulty)
 	difficulty = new_diff
