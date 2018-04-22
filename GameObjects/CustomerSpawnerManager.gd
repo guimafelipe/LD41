@@ -12,7 +12,10 @@ var spawn_time = [13.0, 10.0, 7.0, 4.0]
 var spawners_free = [] # array of customer spawners
 var spawners_used = []
 
+var global_state_node
+
 func _ready():
+	global_state_node = get_node("../GameState")
 	var possible_spawners = get_children()
 	for spawner in possible_spawners:
 		if spawner is cstmr_spwnr_class: 
@@ -23,6 +26,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	if(global_state_node):
+		difficulty = global_state_node.difficulty
 	pass
 
 func reset_timer():
