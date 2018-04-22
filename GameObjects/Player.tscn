@@ -56,6 +56,10 @@ _sections_unfolded = [ "Transform" ]
 
 _sections_unfolded = [ "Transform" ]
 
+[node name="PlaceholderPoint" type="Spatial" parent="Head/Camera" index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.585644, -0.612947, -0.991413 )
+
 [node name="Target" parent="." index="2" instance=ExtResource( 2 )]
 
 

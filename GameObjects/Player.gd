@@ -22,8 +22,15 @@ var changing_gun = false
 
 #var bullet_scene = preload("Bullet.tscn")
 enum {PIZZA, HAMBURGUER, HOTDOG} #Botar isso numa variável global
-var bullet_scene = preload("PizzaBullet.tscn")
-var bullet_scenes = Array()
+#var bullet_scene = preload("PizzaBullet.tscn")
+var bullet_scenes = [preload("res://GameObjects/PizzaBullet.tscn"),
+preload("res://GameObjects/BurguerBullet.tscn"),
+preload("res://GameObjects/HotdogBullet.tscn")
+]
+var bullet_placeholders = [preload("res://GameObjects/PizzaPlaceholder.tscn"),
+preload("res://GameObjects/BurguerPlaceholder.tscn"),
+preload("res://GameObjects/HotdogPlaceholder.tscn")
+]
 var current_bullet = -1
 
 onready var spawnerClass = preload("res://GameObjects/Spawner.gd")
@@ -31,9 +38,7 @@ onready var spawnerClass = preload("res://GameObjects/Spawner.gd")
 func _ready():
 	camera_width_center = OS.get_window_size().x / 2
 	camera_height_center = OS.get_window_size().y / 2
-	bullet_scenes.append(load("res://GameObjects/PizzaBullet.tscn"))
-	bullet_scenes.append(load("res://GameObjects/BurguerBullet.tscn"))
-	bullet_scenes.append(load("res://GameObjects/HotdogBullet.tscn"))
+	
 	pass
 
 func _physics_process(delta):
@@ -63,6 +68,8 @@ func _physics_process(delta):
 
 func load_placeholder():
 	# check current_bullet value and load correspondent placeholder
+	var ph = bullet_placeholders[current_bullet].instance()
+	$Head/Camera/PlaceholderPoint.add_child(ph)
 	pass
 
 func _input(event):
@@ -93,9 +100,13 @@ func fire_bullet():
 	if current_bullet == -1:
 		return
 	var clone = bullet_scenes[current_bullet].instance()
+	current_bullet = -1
+	var phld_point = $Head/Camera/PlaceholderPoint
+	if phld_point.get_child_count() > 0: #deveria sempre ser o caso
+		phld_point.get_child(0).queue_free()
+	
 	var scene_root = get_tree().root.get_children()[0]
 	
 	scene_root.add_child(clone)
 	clone.global_transform = get_node("Head/Camera/Gun_fire_point").global_transform
 	clone.init()
-	current_bullet = -1

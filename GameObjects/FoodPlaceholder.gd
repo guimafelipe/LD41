@@ -1,14 +1,4 @@
-extends RigidBody
-
-onready var pizza_mesh = preload("res://GameObjects/Pizza.tscn")
-
+extends MeshInstance
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	pass
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
