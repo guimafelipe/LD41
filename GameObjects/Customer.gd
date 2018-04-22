@@ -10,14 +10,21 @@ var patience = 15.0
 signal wasFeed
 signal fedWrong
 
+var min_time = [15.0, 12.0, 10.0, 8.0]
+var max_time = [25.0, 23.0, 19.0, 15.0]
+
 func _ready():
+	#print(self is foodType)
+	pass
+
+func setDifficulty(difficulty): #that is the function that actually start
 	randomize()
-	patience = float(randi()%25)
+	var pat_range = max_time[difficulty] - min_time[difficulty]
+	patience = min_time[difficulty] + randf()*pat_range
 	$Patience.wait_time = patience
 	myFood = randi()%3
 	
 	startTimer()
-	#print(self is foodType)
 	pass
 
 func _process(delta):
@@ -39,13 +46,12 @@ func _on_Patience_timeout():
 	pass # replace with function body
 
 func _on_Customer_body_entered( body ):
-	print("oi")
 	print(body is foodType)
 	if(body is foodType):
-		print("Chocou com a comida")
+#		print("Chocou com a comida")
 		# checar se é a comida certa
 		if(body.foodClass == myFood):
-			print("Comida certa")
+#			print("Comida certa")
 			# ficar feliz
 			#se retirar do restaurante
 			emit_signal("wasFeed")
@@ -53,6 +59,6 @@ func _on_Customer_body_entered( body ):
 			queue_free() #aqui pode ter uma animaçãozinha antes
 		else:
 			body.queue_free()			
-			print("Comida errada")
+#			print("Comida errada")
 			emit_signal("fedWrong")
 			#perdeu o jogo =/
