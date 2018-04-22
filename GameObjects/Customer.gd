@@ -2,26 +2,23 @@ extends Area
 
 onready var foodType = preload("res://GameObjects/Bullet.gd")
 
-export var patience = 15.0
 enum Food {PIZZA, HAMBURGUER, HOTDOG}
 var myFood
+
+var patience = 15.0
 
 signal wasFeed
 signal fedWrong
 
 func _ready():
-	$Patience.wait_time = patience
 	randomize()
+	patience = float(randi()%25)
+	$Patience.wait_time = patience
 	myFood = randi()%3
 	
 	startTimer()
 	#print(self is foodType)
 	pass
-
-#func init(_patience, _foodType):
-#	patience = _patience 
-#	myFood = _foodType #TODO: gerar aleatoriamente uma comida
-#	pass
 
 func _process(delta):
 	#ver quanto tempo passou e atualizar a arte para mostrar o nivel de paciencia
@@ -31,6 +28,7 @@ func _process(delta):
 	pass
 
 func updateMesh(remaigingTime):
+	$MeshInstance.updateMesh(remaigingTime)
 	pass
 
 func startTimer():
