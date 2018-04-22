@@ -15,6 +15,8 @@ var max_time = [25.0, 23.0, 19.0, 15.0]
 
 func _ready():
 	#print(self is foodType)
+	min_time = GlobalData.min_time
+	max_time = GlobalData.max_time
 	pass
 
 func setDifficulty(difficulty): #that is the function that actually start

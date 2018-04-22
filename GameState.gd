@@ -5,6 +5,7 @@ var difficulty = 0
 var difficulty_map = [20.0, 50.0, 80.0]
 
 func _ready():
+	difficulty_map = GlobalData.difficulty_map
 	pass
 
 func _process(delta):

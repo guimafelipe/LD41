@@ -15,6 +15,7 @@ var spawners_used = []
 var global_state_node
 
 func _ready():
+	spawn_time = GlobalData.spawn_time
 	global_state_node = get_node("../GameState")
 	var possible_spawners = get_children()
 	for spawner in possible_spawners:
