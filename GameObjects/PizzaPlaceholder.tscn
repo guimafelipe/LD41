@@ -6,9 +6,10 @@
 
 [node name="PizzaPlaceholder" instance=ExtResource( 1 )]
 
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 mesh = ExtResource( 2 )
 material/0 = null
 script = ExtResource( 3 )
-_sections_unfolded = [ "material" ]
+_sections_unfolded = [ "Geometry", "LOD", "Transform", "material" ]
 
 
