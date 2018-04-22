@@ -37,7 +37,7 @@ func reset_timer():
 	assert(difficulty >= 0 and difficulty < spawn_time.size())
 	$SpawnTimer.wait_time = spawn_time[difficulty] + uncertainty
 	$SpawnTimer.start()
-	print("resetei o timer ", $SpawnTimer.wait_time)
+	#print("resetei o timer ", $SpawnTimer.wait_time)
 
 func increase_difficulty():
 	if(difficulty == max_difficulty):
@@ -50,12 +50,19 @@ func free_spawner(who):
 	pass
 
 func spawn_customer():
+	if(spawners_free.size() == 0):
+		return
 	randomize()
 	var i = randi()%spawners_free.size()
 	var to_spawn = spawners_free[i]
 	to_spawn.spawnCustomer(difficulty)
 	spawners_free.erase(to_spawn)
 	spawners_used.append(to_spawn)
+
+func lose_game(state):
+	GlobalData.lost_state = state
+	#get_tree().change_scene("res://Scenes/Menu.tscn")
+	pass
 
 func _on_SpawnTimer_timeout():
 	#select a free spanwer to spawn a customer

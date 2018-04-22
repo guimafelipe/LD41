@@ -20,6 +20,8 @@ func spawnCustomer(difficulty):
 	myCustomer.setDifficulty(difficulty)
 	add_child(myCustomer)
 	myCustomer.connect("wasFeed", self, "customerDestroyed")
+	myCustomer.connect("fedWrong", self, "cstmrFedWrong")
+	myCustomer.connect("diedFromHunger", self, "cstmrDiedFromHunger")
 
 func customerDestroyed():
 	#faz alguma coisa com o customer?
@@ -28,6 +30,14 @@ func customerDestroyed():
 	myCustomer = null
 	#$Timer.start()
 	emit_signal("got_free", self)
+
+func cstmrFedWrong():
+	if(get_parent()):
+		get_parent().lose_game(1)
+
+func cstmrDiedFromHunger():
+	if(get_parent()):
+		get_parent().lose_game(2)
 
 func _on_Timer_timeout():
 #	spawnCustomer()

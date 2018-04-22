@@ -9,6 +9,7 @@ var patience = 15.0
 
 signal wasFeed
 signal fedWrong
+signal diedFromHunger
 
 var min_time = [15.0, 12.0, 10.0, 8.0]
 var max_time = [25.0, 23.0, 19.0, 15.0]
@@ -45,6 +46,7 @@ func startTimer():
 
 func _on_Patience_timeout():
 	print("Perdeu o jogo")
+	emit_signal("diedFromHunger")
 	pass # replace with function body
 
 func _on_Customer_body_entered( body ):
