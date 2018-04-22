@@ -69,10 +69,9 @@ func _physics_process(delta):
 func load_placeholder():
 	# check current_bullet value and load correspondent placeholder
 	
-	var phld_point = $Head/Camera/PlaceholderPoint
-	if phld_point.get_child_count() > 0: #deveria sempre ser o caso
-		phld_point.get_child(0).queue_free()
+	remove_placeholder()
 	
+	var phld_point = $Head/Camera/PlaceholderPoint
 	var ph = bullet_placeholders[current_bullet].instance()
 	phld_point.add_child(ph)
 	pass
