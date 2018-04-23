@@ -10,6 +10,7 @@ var patience = 15.0
 signal wasFeed
 signal fedWrong
 signal diedFromHunger
+signal lookAtMe #will use to make player look at this direction
 
 var min_time #= [15.0, 12.0, 10.0, 8.0]
 var max_time #= [25.0, 23.0, 19.0, 15.0]
@@ -28,9 +29,7 @@ var fed_right = false
 var is_dead = false
 
 func _ready():
-	#print(self is foodType)
 	_get_data()
-	pass
 
 func _get_data():
 	min_time = GlobalData.min_time
@@ -45,7 +44,6 @@ func setDifficulty(difficulty): #that is the function that actually start
 	myFood = randi()%3
 	$Baloon.set_texture(myFood)
 	startTimer()
-	pass
 
 func _process(delta):
 	#ver quanto tempo passou e atualizar a arte para mostrar o nivel de paciencia
@@ -55,7 +53,6 @@ func _process(delta):
 		return
 	updateMesh(remainingTime)
 	updateFace(remainingTime)
-	pass
 
 func updateFace(remainingTime):
 	if was_fed:
@@ -68,11 +65,11 @@ func updateFace(remainingTime):
 		return
 	if(remainingTime < 15.0):
 		$Face.texture = faces[1]
+		return
 	$Face.texture = faces[0]
 
 func updateMesh(remaigingTime):
 	$MeshInstance.updateMesh(remaigingTime)
-	pass
 
 func startTimer():
 	$Patience.start()
@@ -80,39 +77,56 @@ func startTimer():
 func _on_Patience_timeout():
 	if fed_right:
 		return
-	print("Perdeu o jogo")
-	is_dead = true
-	emit_signal("diedFromHunger")
+	inanition_anim()
+#	emit_signal("diedFromHunger")
 
 func _on_Customer_body_entered( body ):
 	if fed_right or is_dead:
 		return
 	if(body is foodType):
 		was_fed = true
-		# checar se é a comida certa
-		if(body.foodClass == myFood):
-			$Patience.stop()
-			fed_right = true
-			body.queue_free()
+		$Baloon.set_texture(-1)
+		var foodClass = body.foodClass
+		body.queue_free()
+		if(foodClass == myFood):
 			fed_right_anim()
 		else:
-			body.queue_free()
-#			print("Comida errada")
-			$Face.texture = faces[5]
-			emit_signal("fedWrong")
-			#perdeu o jogo =/
+			fed_wrong_anim()
+
+
+func fed_wrong_anim():
+	dead_anim()
+
+func inanition_anim():
+	dead_anim()
+
+func dead_anim():
+	$MeshInstance.updateMesh(0)
+	is_dead = true
+	$Face.texture = faces[5]
+	emit_signal("lookAtMe")
+	$DeathAnimTimer.wait_time = 2
+	$DeathAnimTimer.start()
+	$DeathSound.play()
 
 func fed_right_anim():
+	fed_right = true
+	$Patience.stop()
 	$Face.texture = faces[4]
-	$Baloon.set_texture(-1)
 	$FedAnimTimer.wait_time = 2
 	$FedAnimTimer.start()
 	$FeedSound.play()
-	pass
 
 func go_away():
 	emit_signal("wasFeed")
 	queue_free()
 
 func _on_FedAnimTimer_timeout():
-	go_away()
+	if not is_dead:
+		go_away()
+
+func _on_DeathAnimTimer_timeout():
+	if was_fed:
+		emit_signal("fedWrong")
+	else:
+		emit_signal("diedFromHunger")

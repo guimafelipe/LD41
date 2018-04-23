@@ -72,7 +72,7 @@ func lose_game(state):
 	GlobalData.lost_state = state
 	#aqui decide chamar a cena do menu
 	#mais podemos mandar a main fazer algo antes
-	#get_tree().change_scene("res://Scenes/Menu.tscn")
+	get_tree().change_scene("res://Scenes/Menu.tscn")
 	pass
 
 func _on_SpawnTimer_timeout():
