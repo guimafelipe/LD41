@@ -25,6 +25,7 @@ var faces = [
 
 var was_fed = false
 var fed_right = false
+var is_dead = false
 
 func _ready():
 	#print(self is foodType)
@@ -42,6 +43,7 @@ func setDifficulty(difficulty): #that is the function that actually start
 	patience = min_time[difficulty] + randf()*pat_range
 	$Patience.wait_time = patience
 	myFood = randi()%3
+	$Baloon.set_texture(myFood)
 	startTimer()
 	pass
 
@@ -49,6 +51,8 @@ func _process(delta):
 	#ver quanto tempo passou e atualizar a arte para mostrar o nivel de paciencia
 	var remainingTime = $Patience.time_left
 	#mudar a cor do mesh instance
+	if fed_right or is_dead:
+		return
 	updateMesh(remainingTime)
 	updateFace(remainingTime)
 	pass
@@ -74,25 +78,23 @@ func startTimer():
 	$Patience.start()
 
 func _on_Patience_timeout():
+	if fed_right:
+		return
 	print("Perdeu o jogo")
+	is_dead = true
 	emit_signal("diedFromHunger")
-	pass # replace with function body
 
 func _on_Customer_body_entered( body ):
-	if fed_right:
+	if fed_right or is_dead:
 		return
 	if(body is foodType):
 		was_fed = true
 		# checar se é a comida certa
 		if(body.foodClass == myFood):
-#			print("Comida certa")
-			# ficar feliz
-			#se retirar do restaurante
-			
+			$Patience.stop()
 			fed_right = true
 			body.queue_free()
 			fed_right_anim()
-			#queue_free() #aqui pode ter uma animaçãozinha antes
 		else:
 			body.queue_free()
 #			print("Comida errada")
@@ -102,6 +104,7 @@ func _on_Customer_body_entered( body ):
 
 func fed_right_anim():
 	$Face.texture = faces[4]
+	$Baloon.set_texture(-1)
 	$FedAnimTimer.wait_time = 2
 	$FedAnimTimer.start()
 	pass

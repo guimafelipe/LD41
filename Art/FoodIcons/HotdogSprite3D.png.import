@@ -2,25 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HotdogSprite3D.png-713f4648b795c1847c64e2bc94326bdd.stex"
+path.s3tc="res://.import/HotdogSprite3D.png-713f4648b795c1847c64e2bc94326bdd.s3tc.stex"
+path.etc2="res://.import/HotdogSprite3D.png-713f4648b795c1847c64e2bc94326bdd.etc2.stex"
 
 [deps]
 
 source_file="res://Art/FoodIcons/HotdogSprite3D.png"
 source_md5="5dfe921bd735484c7d6b4d5186b3b124"
 
-dest_files=[ "res://.import/HotdogSprite3D.png-713f4648b795c1847c64e2bc94326bdd.stex" ]
-dest_md5="480a3253e509500d2c91cf7ec801b966"
+dest_files=[ "res://.import/HotdogSprite3D.png-713f4648b795c1847c64e2bc94326bdd.s3tc.stex", "res://.import/HotdogSprite3D.png-713f4648b795c1847c64e2bc94326bdd.etc2.stex" ]
+dest_md5="959a313a22e17ca97473a979cd82556c"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -28,5 +29,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

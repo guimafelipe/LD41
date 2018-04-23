@@ -2,25 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BurguerSprite3D.png-9732cf73ee966becc815eec129897578.stex"
+path.s3tc="res://.import/BurguerSprite3D.png-9732cf73ee966becc815eec129897578.s3tc.stex"
+path.etc2="res://.import/BurguerSprite3D.png-9732cf73ee966becc815eec129897578.etc2.stex"
 
 [deps]
 
 source_file="res://Art/FoodIcons/BurguerSprite3D.png"
 source_md5="58b3e191ef62a6888d64aea250a61504"
 
-dest_files=[ "res://.import/BurguerSprite3D.png-9732cf73ee966becc815eec129897578.stex" ]
-dest_md5="d5777ea7da74fb12490b2cef0cda0d5c"
+dest_files=[ "res://.import/BurguerSprite3D.png-9732cf73ee966becc815eec129897578.s3tc.stex", "res://.import/BurguerSprite3D.png-9732cf73ee966becc815eec129897578.etc2.stex" ]
+dest_md5="cc329310787462430bc24c2d1e9a2a4f"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -28,5 +29,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

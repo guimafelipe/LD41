@@ -2,25 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PizzaSprite3D.png-35b48b377eb631ff69193bd5e07f44f6.stex"
+path.s3tc="res://.import/PizzaSprite3D.png-35b48b377eb631ff69193bd5e07f44f6.s3tc.stex"
+path.etc2="res://.import/PizzaSprite3D.png-35b48b377eb631ff69193bd5e07f44f6.etc2.stex"
 
 [deps]
 
 source_file="res://Art/FoodIcons/PizzaSprite3D.png"
 source_md5="9ae703b1af8e38cb6be0b77c9ffec008"
 
-dest_files=[ "res://.import/PizzaSprite3D.png-35b48b377eb631ff69193bd5e07f44f6.stex" ]
-dest_md5="b6f4544881dc5ae8d62b4754284a2299"
+dest_files=[ "res://.import/PizzaSprite3D.png-35b48b377eb631ff69193bd5e07f44f6.s3tc.stex", "res://.import/PizzaSprite3D.png-35b48b377eb631ff69193bd5e07f44f6.etc2.stex" ]
+dest_md5="8b309be31c0a1abfea10460f8640845d"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -28,5 +29,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
