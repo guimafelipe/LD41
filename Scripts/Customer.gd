@@ -24,6 +24,7 @@ var faces = [
 ]
 
 var was_fed = false
+var fed_right = false
 
 func _ready():
 	#print(self is foodType)
@@ -78,7 +79,8 @@ func _on_Patience_timeout():
 	pass # replace with function body
 
 func _on_Customer_body_entered( body ):
-	print(body is foodType)
+	if fed_right:
+		return
 	if(body is foodType):
 		was_fed = true
 		# checar se é a comida certa
@@ -86,13 +88,27 @@ func _on_Customer_body_entered( body ):
 #			print("Comida certa")
 			# ficar feliz
 			#se retirar do restaurante
-			emit_signal("wasFeed")
-			$Face.texture = faces[4]
+			
+			fed_right = true
 			body.queue_free()
-			queue_free() #aqui pode ter uma animaçãozinha antes
+			fed_right_anim()
+			#queue_free() #aqui pode ter uma animaçãozinha antes
 		else:
-			body.queue_free()			
+			body.queue_free()
 #			print("Comida errada")
 			$Face.texture = faces[5]
 			emit_signal("fedWrong")
 			#perdeu o jogo =/
+
+func fed_right_anim():
+	$Face.texture = faces[4]
+	$FedAnimTimer.wait_time = 2
+	$FedAnimTimer.start()
+	pass
+
+func go_away():
+	emit_signal("wasFeed")
+	queue_free()
+
+func _on_FedAnimTimer_timeout():
+	go_away()

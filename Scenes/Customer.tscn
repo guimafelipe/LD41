@@ -154,8 +154,17 @@ region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="FedAnimTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
 [connection signal="body_entered" from="." to="." method="_on_Customer_body_entered"]
 
 [connection signal="timeout" from="Patience" to="." method="_on_Patience_timeout"]
+
+[connection signal="timeout" from="FedAnimTimer" to="." method="_on_FedAnimTimer_timeout"]
 
 
