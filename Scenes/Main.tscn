@@ -77,7 +77,6 @@ transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 2.13793, 3.49607, -15.0799
 
 [node name="CustomerSpawnerManager" parent="." index="6" instance=ExtResource( 9 )]
 
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.257183, 0 )
 _sections_unfolded = [ "Transform" ]
 
@@ -100,5 +99,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74636, 2.28161, 2.65774 )
 [node name="CustomerSpawner5" parent="CustomerSpawnerManager" index="5" instance=ExtResource( 10 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7406, 2.28161, -0.156515 )
+
+[node name="CustomerSpawner6" parent="CustomerSpawnerManager" index="6" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.38963, 2.28161, -14.2983 )
+
+[node name="CustomerSpawner7" parent="CustomerSpawnerManager" index="7" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.457041, 2.28161, -8.90879 )
+
+[node name="CustomerSpawner8" parent="CustomerSpawnerManager" index="8" instance=ExtResource( 10 )]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.01535, 2.28161, 7.93176 )
 
 

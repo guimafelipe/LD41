@@ -14,8 +14,11 @@ var spawners_used = []
 
 var global_state_node
 
+var first_spawn_time
+
 func _ready():
 	spawn_time = GlobalData.spawn_time
+	first_spawn_time = GlobalData.first_spawn_time
 	global_state_node = get_node("../GameState")
 	var possible_spawners = get_children()
 	for spawner in possible_spawners:
@@ -23,13 +26,19 @@ func _ready():
 			spawners_free.append(spawner)
 	for spawner in spawners_free:
 		spawner.connect("got_free", self, "free_spawner")
-	reset_timer()
+	first_reset_timer()
 	pass
 
 func _process(delta):
 	if(global_state_node):
 		difficulty = global_state_node.difficulty
 	pass
+
+func first_reset_timer():
+	randomize()
+	var uncertainty = randf()*2 - 1
+	$SpawnTimer.wait_time = first_spawn_time + uncertainty
+	$SpawnTimer.start()
 
 func reset_timer():
 	randomize()

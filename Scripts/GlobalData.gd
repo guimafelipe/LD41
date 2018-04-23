@@ -1,21 +1,23 @@
 extends Node
 
-const max_difficulty = 3 # a dificuldade máxima do jogo
+const max_difficulty = 4 # a dificuldade máxima do jogo
 # nos arrays abaixo, cada indice é correspondente a uma dificuldade em ordem crescente
 
 
-const difficulty_map = [0.0, 20.0, 50.0, 80.0]
+const difficulty_map = [0.0, 20.0, 40.0, 60.0, 80.0]
 #esse array significa o tempo em segundos onde começa cada dificuldade
 #inicialmente, a dificuldade 0 começa após 0 segundos, 
 # a dificuldade 1 ocorrerá depois de 20 segundos e assim por diante
 
-const min_time = [15.0, 12.0, 10.0, 8.0]
+const min_time = [15.0, 12.0, 10.0, 8.0, 5.0]
 #esse é o tempo mínimo da paciência do customer em cada dificuldade
 
-const max_time = [25.0, 23.0, 19.0, 15.0]
+const max_time = [25.0, 23.0, 19.0, 15.0, 10.0]
 #tempo maximo da paciencia do customer em cada dificuldade
 
-const spawn_time = [13.0, 10.0, 7.0, 4.0]
+const first_spawn_time = 5.0
+
+const spawn_time = [13.0, 10.0, 7.0, 4.0, 2.0]
 #tempo que o spawner demora par spawnar o próximo customer em cada dificuldade
 
 var lost_state = 0 #usar isso no ready do menu para saber o que mostrar
