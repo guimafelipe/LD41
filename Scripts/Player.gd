@@ -101,7 +101,7 @@ func aim():
 		camera_change = Vector2()
 
 func fire_bullet():
-	if current_bullet == -1:
+	if current_bullet == -1: #no bullet selected
 		return
 	var clone = bullet_scenes[current_bullet].instance()
 	current_bullet = -1
@@ -113,6 +113,8 @@ func fire_bullet():
 	scene_root.add_child(clone)
 	clone.global_transform = get_node("Head/Camera/Gun_fire_point").global_transform
 	clone.init()
+	
+	SoundManager.get_node("Swoosh").play()
 
 func remove_placeholder():
 	var phld_point = $Head/Camera/PlaceholderPoint

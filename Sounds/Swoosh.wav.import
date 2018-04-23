@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Swoosh.wav-44df7efc476cfcc7e8ee2516bdd9969b.sample"
+
+[deps]
+
+source_file="res://Sounds/Swoosh.wav"
+source_md5="8f28fc8c79aec49f41e1be6ccc4baf61"
+
+dest_files=[ "res://.import/Swoosh.wav-44df7efc476cfcc7e8ee2516bdd9969b.sample" ]
+dest_md5="1a0bf319053ea0457f87ef33119bf3a1"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
