@@ -2,25 +2,26 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/emoticon1.png-295be0be60ac4f90647f2b75978d82d6.stex"
+path.s3tc="res://.import/emoticon1.png-295be0be60ac4f90647f2b75978d82d6.s3tc.stex"
+path.etc2="res://.import/emoticon1.png-295be0be60ac4f90647f2b75978d82d6.etc2.stex"
 
 [deps]
 
 source_file="res://Art/Emoticons/emoticon1.png"
 source_md5="3c6410735cbc1ad6e32f8afcb3eba9d8"
 
-dest_files=[ "res://.import/emoticon1.png-295be0be60ac4f90647f2b75978d82d6.stex" ]
-dest_md5="ad3b9c76efa6a3caeb8f1a91f0a66f5a"
+dest_files=[ "res://.import/emoticon1.png-295be0be60ac4f90647f2b75978d82d6.s3tc.stex", "res://.import/emoticon1.png-295be0be60ac4f90647f2b75978d82d6.etc2.stex" ]
+dest_md5="230d35933bdad7a53dcf2c2c0d4ad9e7"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=true
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
@@ -28,5 +29,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
