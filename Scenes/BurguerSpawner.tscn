@@ -1,20 +1,736 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Spawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/BurguerSpawner.gd" type="Script" id=2]
 [ext_resource path="res://Meshes/Hamburguer.material" type="Material" id=3]
+[ext_resource path="res://MeshesNew/burger.obj" type="ArrayMesh" id=4]
 
+[sub_resource type="BoxShape" id=1]
 
-
-
+extents = Vector3( 0.501191, 0.542071, 0.502508 )
 
 [node name="BurguerSpawner" instance=ExtResource( 1 )]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 2 )
 
-[node name="MeshInstance" parent="." index="1"]
+[node name="CollisionShape" parent="." index="0"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0830003, 0.616847, 0 )
+visible = false
+disabled = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2" type="CollisionShape" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0830003, 0.616847, 0 )
+shape = SubResource( 1 )
+disabled = false
+
+[node name="MeshInstance" parent="." index="2"]
+
+visible = false
 material/0 = ExtResource( 3 )
 _sections_unfolded = [ "material" ]
+
+[node name="MeshInstance2" type="MeshInstance" parent="." index="3"]
+
+transform = Transform( 0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0.10478, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance3" type="MeshInstance" parent="." index="4"]
+
+transform = Transform( -0.15248, -0.0956548, 0, 0.0956548, -0.15248, 0, 0, 0, 0.18, -0.314616, 0.185946, 0 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance4" type="MeshInstance" parent="." index="5"]
+
+transform = Transform( 0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, -0.314616, 0.10478, 0.419687 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance5" type="MeshInstance" parent="." index="6"]
+
+transform = Transform( 0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0.0123543, 0.10478, 0.419687 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance6" type="MeshInstance" parent="." index="7"]
+
+transform = Transform( 0.175225, 0.041183, 0, -0.0397734, 0.169228, -0.04669, -0.0106824, 0.0454515, 0.173839, 0.368272, 0.104779, 0.418936 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance7" type="MeshInstance" parent="." index="8"]
+
+transform = Transform( -0.0408788, -0.175297, 0, 0.175297, -0.0408788, 0, 0, 0, 0.18, 0.36144, 0.19803, 0.0288299 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance8" type="MeshInstance" parent="." index="9"]
+
+transform = Transform( 0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0.401308, 0.10478, -0.365286 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance10" type="MeshInstance" parent="." index="10"]
+
+transform = Transform( -0.0180634, 0.179091, 0, -0.179091, -0.0180634, 0, 0, 0, 0.18, 0.187981, 0.366679, -0.19352 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance11" type="MeshInstance" parent="." index="11"]
+
+transform = Transform( -0.0180634, 0.179091, 0, -0.179091, -0.0180634, 0, 0, 0, 0.18, -0.0924331, 0.366679, -0.19352 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance12" type="MeshInstance" parent="." index="12"]
+
+transform = Transform( 0.0134715, 0.179495, 0, -0.179495, 0.0134715, 0, 0, 0, 0.18, -0.445488, 0.189508, -0.19352 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance13" type="MeshInstance" parent="." index="13"]
+
+transform = Transform( 0.179472, -0.0137769, 0, 0.0137769, 0.179472, 0, 0, 0, 0.18, -0.199178, 0.365674, 0.131215 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance14" type="MeshInstance" parent="." index="14"]
+
+transform = Transform( 0.179472, -0.0137769, 0, -0.0071579, -0.0932462, 0.153798, -0.0117715, -0.153347, -0.0935205, 0.121162, 0.456249, 0.211102 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance15" type="MeshInstance" parent="." index="15"]
+
+transform = Transform( 0.179472, -0.0137769, 0, -0.0136219, -0.177454, -0.0269196, 0.00206038, 0.0268406, -0.177976, 0.121162, 0.680218, -0.0498269 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance16" type="MeshInstance" parent="." index="16"]
+
+transform = Transform( 0.147052, 0.076854, -0.0697802, 0.103603, -0.101077, 0.107004, 0.006503, -0.127581, -0.12681, -0.242628, 0.729236, 0.12363 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance27" type="MeshInstance" parent="." index="17"]
+
+transform = Transform( -0.0441948, 0.103454, 0.140513, 0.103603, -0.101077, 0.107004, 0.140404, 0.107148, -0.0347281, -0.148943, 1.04114, -0.0119722 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance28" type="MeshInstance" parent="." index="18"]
+
+transform = Transform( 0.13522, 0.117052, -0.0203532, 0.103603, -0.101077, 0.107004, 0.0581548, -0.0920988, -0.143303, 0.27062, 0.832419, -0.0119722 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance29" type="MeshInstance" parent="." index="19"]
+
+transform = Transform( -0.119703, 0.0228884, -0.132466, 0.0446748, 0.174064, -0.0102946, 0.126788, -0.0397233, -0.121436, 0.272196, 0.971007, -0.0119722 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance17" type="MeshInstance" parent="." index="20"]
+
+transform = Transform( 0.121283, 0.131304, 0.0212061, -0.0689096, 0.0865791, -0.14197, -0.113763, 0.0875403, 0.108604, 0.29828, 0.396241, 0.112445 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance18" type="MeshInstance" parent="." index="21"]
+
+transform = Transform( 0.134179, -0.061822, -0.10283, -0.0716304, 0.0824833, -0.143058, 0.0962548, 0.147562, 0.0368846, 0.423985, 0.550901, -0.153433 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance9" type="MeshInstance" parent="." index="22"]
+
+transform = Transform( 0.0542239, -0.171639, 0, 0.171639, 0.0542239, 0, 0, 0, 0.18, 0.022374, 0.134394, -0.31789 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance19" type="MeshInstance" parent="." index="23"]
+
+transform = Transform( 0.0166447, -0.0526867, 0.17131, 0.171639, 0.0542239, 0, -0.051606, 0.163352, 0.0552534, 0.022374, 0.503862, 0.393109 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance20" type="MeshInstance" parent="." index="24"]
+
+transform = Transform( -0.0148535, 0.0470167, 0.173115, 0.171639, 0.0542239, 0, -0.0521498, 0.165073, -0.0493072, 0.444019, 0.458842, 0.393109 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance21" type="MeshInstance" parent="." index="25"]
+
+transform = Transform( -0.0148535, 0.0470167, 0.173115, 0.0250484, 0.172549, -0.0447139, -0.177629, 0.0204006, -0.0207814, 0.193904, 0.739166, 0.189132 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance22" type="MeshInstance" parent="." index="26"]
+
+transform = Transform( -0.0289718, -0.110801, 0.138866, 0.00294644, 0.140382, 0.112625, -0.177629, 0.0204006, -0.0207814, -0.0501862, 0.77917, 0.189132 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance23" type="MeshInstance" parent="." index="27"]
+
+transform = Transform( -0.162905, -0.0458017, 0.0613517, -0.0662892, 0.156549, -0.0591455, -0.0383088, -0.0761226, -0.158549, -0.282046, 0.223, -0.400605 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance24" type="MeshInstance" parent="." index="28"]
+
+transform = Transform( -0.162905, -0.0458017, 0.0613517, -0.0662892, 0.156549, -0.0591455, -0.0383088, -0.0761226, -0.158549, 0.0781176, 0.449752, -0.400605 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance25" type="MeshInstance" parent="." index="29"]
+
+transform = Transform( -0.162905, -0.0458017, 0.0613517, -0.0542636, 0.170826, -0.016556, -0.0540119, -0.033479, -0.16841, 0.0781176, 0.776683, -0.202545 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance26" type="MeshInstance" parent="." index="30"]
+
+transform = Transform( 0.0981713, 0.103557, 0.10972, 0.141347, -0.108904, -0.0236829, 0.0527576, 0.0990752, -0.140715, -0.19954, 0.621592, -0.202545 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance30" type="MeshInstance" parent="." index="31"]
+
+transform = Transform( 0.0981713, 0.103557, 0.10972, 0.141347, -0.108904, -0.0236829, 0.0527576, 0.0990752, -0.140715, -0.280099, 0.653076, -0.351431 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance31" type="MeshInstance" parent="." index="32"]
+
+transform = Transform( 0.126051, -0.122449, -0.0389541, -0.117165, -0.0871233, -0.10527, 0.0527576, 0.0990752, -0.140715, -0.100863, 0.989689, -0.347003 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance32" type="MeshInstance" parent="." index="33"]
+
+transform = Transform( 0.0771241, -0.156633, 0.0437936, -0.117165, -0.0871233, -0.10527, 0.112802, 0.0165988, -0.139285, 0.241089, 0.726159, -0.351431 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance33" type="MeshInstance" parent="." index="34"]
+
+transform = Transform( -0.143566, -0.0974241, -0.0479297, 0.0495791, 0.0118678, -0.17263, 0.0965951, -0.15089, 0.0173688, 0.241089, 0.94639, -0.351431 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance34" type="MeshInstance" parent="." index="35"]
+
+transform = Transform( -0.110583, -0.0557562, 0.130624, -0.104119, -0.0807685, -0.12262, 0.0965951, -0.15089, 0.0173688, 0.400592, 0.783774, 0.44532 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance35" type="MeshInstance" parent="." index="36"]
+
+transform = Transform( 0.100086, 0.0787169, 0.127226, -0.0668651, 0.160467, -0.0466827, -0.133835, -0.0213039, 0.118466, 0.121374, 1.00408, 0.297471 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
+
+[node name="MeshInstance36" type="MeshInstance" parent="." index="37"]
+
+transform = Transform( 0.100086, 0.0787169, 0.127226, -0.0668651, 0.160467, -0.0466827, -0.133835, -0.0213039, 0.118466, -0.213659, 0.892427, 0.297471 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+_sections_unfolded = [ "Transform" ]
 
 

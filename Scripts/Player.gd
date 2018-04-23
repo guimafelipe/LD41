@@ -46,8 +46,8 @@ func lookAtAngryCustomer(location):
 		return
 	lost = true
 	print(location)
-	
-	$Head/Camera.rotation.x = 0
+	var camera = $Head/Camera
+	camera.rotation.x = 0
 	$Head.look_at(location, Vector3(0,1,0));
 
 func _physics_process(delta):

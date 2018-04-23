@@ -1,6 +1,6 @@
 extends Node
 
-const max_difficulty = 5 # a dificuldade máxima do jogo
+const max_difficulty = 6 # a dificuldade máxima do jogo
 # nos arrays abaixo, cada indice é correspondente a uma dificuldade em ordem crescente
 
 

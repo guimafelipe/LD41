@@ -65,15 +65,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3373, 0, -3.55745 )
 
 [node name="PizzaSpawner" parent="." index="3" instance=ExtResource( 6 )]
 
-transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 2.30381, 3.56414, -12.6417 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92415, 2.66397, -12.927 )
 
 [node name="HotdogSpawner" parent="." index="4" instance=ExtResource( 7 )]
 
-transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 2.32059, 3.48851, -13.9392 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32059, 2.65175, -14.2015 )
 
 [node name="BurguerSpawner" parent="." index="5" instance=ExtResource( 8 )]
 
-transform = Transform( 0.4, 0, 0, 0, 1, 0, 0, 0, 0.4, 2.13793, 3.49607, -15.0799 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13793, 2.59097, -15.5401 )
 
 [node name="CustomerSpawnerManager" parent="." index="6" instance=ExtResource( 9 )]
 
