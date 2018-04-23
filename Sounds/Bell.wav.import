@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bell.wav-ecfd4cde121a4044b8896372129a3c60.sample"
+
+[deps]
+
+source_file="res://Sounds/Bell.wav"
+source_md5="3efc0668e40693a2edf64a0fcdc868a3"
+
+dest_files=[ "res://.import/Bell.wav-ecfd4cde121a4044b8896372129a3c60.sample" ]
+dest_md5="0e0c50730baebb6556c8fdda2565835d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sounds/Bell.wav" type="AudioStream" id=1]
+
+[node name="SoundManager" type="Node"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." index="0"]
+
+stream = null
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="UIClick" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Swoosh" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="DoorBell" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 1 )
+volume_db = -24.37
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

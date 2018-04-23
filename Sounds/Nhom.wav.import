@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Nhom.wav-8684a7b203e0c11727bef94bf369afe5.sample"
+
+[deps]
+
+source_file="res://Sounds/Nhom.wav"
+source_md5="8f827525836a293258695fce2663df54"
+
+dest_files=[ "res://.import/Nhom.wav-8684a7b203e0c11727bef94bf369afe5.sample" ]
+dest_md5="02720e92135488cdf71326bc14fc4da7"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

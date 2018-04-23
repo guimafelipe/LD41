@@ -26,6 +26,7 @@ func spawnCustomer(difficulty):
 	myCustomer.connect("wasFeed", self, "customerDestroyed")
 	myCustomer.connect("fedWrong", self, "cstmrFedWrong")
 	myCustomer.connect("diedFromHunger", self, "cstmrDiedFromHunger")
+	SoundManager.get_node("./DoorBell").play()
 
 func customerDestroyed():
 	#faz alguma coisa com o customer?

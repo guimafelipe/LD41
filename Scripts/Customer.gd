@@ -107,6 +107,7 @@ func fed_right_anim():
 	$Baloon.set_texture(-1)
 	$FedAnimTimer.wait_time = 2
 	$FedAnimTimer.start()
+	$FeedSound.play()
 	pass
 
 func go_away():
