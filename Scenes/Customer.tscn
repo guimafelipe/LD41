@@ -46,6 +46,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=3]
 
+resource_local_to_scene = true
 render_priority = 0
 shader = SubResource( 2 )
 shader_param/albedo = Color( 1, 1, 1, 1 )
@@ -59,6 +60,7 @@ shader_param/uv1_scale = Vector3( 1, 1, 1 )
 shader_param/uv1_offset = Vector3( 0, 0, 0 )
 shader_param/uv2_scale = Vector3( 1, 1, 1 )
 shader_param/uv2_offset = Vector3( 0, 0, 0 )
+_sections_unfolded = [ "Resource" ]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 
