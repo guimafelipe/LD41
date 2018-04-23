@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/balcao.obj-081463d70cb0ec453e76e2cac8bdf0d8.mesh"
+
+[deps]
+
+files=[ "res://.import/balcao.obj-081463d70cb0ec453e76e2cac8bdf0d8.mesh" ]
+
+source_file="res://RestaurantMeshes/balcao.obj"
+source_md5="6cfdf6e7f9fcc694135ebd456cd90205"
+
+dest_files=[ "res://.import/balcao.obj-081463d70cb0ec453e76e2cac8bdf0d8.mesh", "res://.import/balcao.obj-081463d70cb0ec453e76e2cac8bdf0d8.mesh" ]
+dest_md5="9a200ce7674ea6b3910054fa049ba989"
+
+[params]
+
+generate_tangents=true

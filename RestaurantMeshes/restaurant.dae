@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.78.0 commit date:2017-02-24, commit time:14:33, hash:e92f235283</authoring_tool>
+    </contributor>
+    <created>2018-04-23T20:27:25</created>
+    <modified>2018-04-23T20:27:25</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Wall3-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.05471784 0.05471784 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Wall1-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Wall2-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">1 0.9453088 0.155179 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Floor-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Wall3-material" name="Wall3">
+      <instance_effect url="#Wall3-effect"/>
+    </material>
+    <material id="Wall1-material" name="Wall1">
+      <instance_effect url="#Wall1-effect"/>
+    </material>
+    <material id="Wall2-material" name="Wall2">
+      <instance_effect url="#Wall2-effect"/>
+    </material>
+    <material id="Floor-material" name="Floor">
+      <instance_effect url="#Floor-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Plane_001-mesh" name="Plane.001">
+      <mesh>
+        <source id="Plane_001-mesh-positions">
+          <float_array id="Plane_001-mesh-positions-array" count="72">-17.41502 13.03355 -13.34581 -17.41502 13.03355 12.39129 -17.41502 -12.50187 -13.3458 -17.41502 -12.50187 12.39129 21.0343 -12.08018 -11.86138 21.0343 -12.08018 12.34946 -18.71989 -12.08018 -11.86137 -18.71989 -12.08018 12.34947 -19.10361 -14.0326 -11.64497 24.77304 -14.0326 -11.64497 -19.10361 14.88422 -11.64497 24.77304 14.88422 -11.64497 20.25487 15.2904 -13.5379 20.25487 15.2904 12.19919 20.25486 -15.2904 -13.5379 20.25487 -15.2904 12.19919 22.41174 12.39097 -13.54521 22.41175 12.39097 13.5452 -24.77304 12.39097 -13.5452 -24.77303 12.39098 13.54521 -18.10173 12.93273 12.10542 20.64421 12.93273 12.10542 -18.10173 -12.60271 12.10542 20.64421 -12.60271 12.10542</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_001-mesh-normals">
+          <float_array id="Plane_001-mesh-normals-array" count="30">1 0 0 0 1 -1.90243e-7 0 0 1 -1 0 2.22327e-7 0 -1 0 0 -1.49388e-7 -1 1 0 0 0 1 0 -1 2.53267e-7 2.22327e-7 0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane_001-mesh-map-0">
+          <float_array id="Plane_001-mesh-map-0-array" count="72">0.009943127 0.002560675 1.009743 1.00236 0.009943366 1.002361 7.80696e-5 0.6089975 0.9999218 7.80272e-5 0.999922 0.6089974 0.9999188 0.009924471 8.11686e-5 0.6688656 8.12121e-5 0.009924292 0.999908 9.17225e-5 9.17225e-5 0.8415472 9.17225e-5 9.19427e-5 7.57602e-5 7.58316e-5 0.574124 0.9999242 7.58673e-5 0.9999242 1.006647 0.996804 0.003195762 -0.00303328 1.006647 -0.003033578 0.009943127 0.002560675 1.009743 0.002560675 1.009743 1.00236 7.80696e-5 0.6089975 7.80272e-5 7.80484e-5 0.9999218 7.80272e-5 0.9999188 0.009924471 0.9999188 0.6688656 8.11686e-5 0.6688656 0.999908 9.17225e-5 0.9999083 0.8415471 9.17225e-5 0.8415472 7.57602e-5 7.58316e-5 0.5741239 7.57602e-5 0.574124 0.9999242 1.006647 0.996804 0.003195822 0.9968043 0.003195762 -0.00303328</float_array>
+          <technique_common>
+            <accessor source="#Plane_001-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane_001-mesh-vertices">
+          <input semantic="POSITION" source="#Plane_001-mesh-positions"/>
+        </vertices>
+        <polylist material="Wall3-material" count="2">
+          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>9 2 6 10 2 7 8 2 8 9 2 24 11 2 25 10 2 26</p>
+        </polylist>
+        <polylist material="Wall1-material" count="6">
+          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>1 0 0 2 0 1 0 0 2 14 3 9 13 3 10 12 3 11 16 4 12 19 4 13 18 4 14 1 6 18 3 6 19 2 6 20 14 8 27 15 8 28 13 8 29 16 9 30 17 9 31 19 9 32</p>
+        </polylist>
+        <polylist material="Wall2-material" count="2">
+          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>6 1 3 5 1 4 4 1 5 6 7 21 7 7 22 5 7 23</p>
+        </polylist>
+        <polylist material="Floor-material" count="2">
+          <input semantic="VERTEX" source="#Plane_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane_001-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane_001-mesh-map-0" offset="2" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>21 5 15 22 5 16 20 5 17 21 5 33 23 5 34 22 5 35</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Plane_003" name="Plane_003" type="NODE">
+        <matrix sid="transform">1.132418 0 0 123.7963 0 -1.132419 9.89992e-8 3.140636 -5.27323e-10 -9.89992e-8 -1.132419 16.2481 0 0 0 1</matrix>
+        <instance_geometry url="#Plane_001-mesh" name="Plane_003">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Wall3-material" target="#Wall3-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Wall1-material" target="#Wall1-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Wall2-material" target="#Wall2-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+              <instance_material symbol="Floor-material" target="#Floor-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

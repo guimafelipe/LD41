@@ -1,36 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Counter.tscn" type="PackedScene" id=1]
-[ext_resource path="res://MeshesNew/RestaurantBox.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://MeshesNew/Wall.material" type="Material" id=3]
-[ext_resource path="res://Meshes/tables.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://RestaurantMeshes/balcao.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://RestaurantMeshes/Wood.material" type="Material" id=3]
+[ext_resource path="res://MeshesNew/RestaurantBox.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://MeshesNew/Wall.material" type="Material" id=5]
+[ext_resource path="res://Meshes/tables.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://RestaurantMeshes/restaurant.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://RestaurantMeshes/Wall1.material" type="Material" id=8]
 
 [node name="Restaurante" type="Spatial"]
 
 [node name="Counter" parent="." index="0" instance=ExtResource( 1 )]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47419, 0, -5.71712 )
-_sections_unfolded = [ "Transform" ]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53764, 1.29331, -14.3104 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "material" ]
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="1"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, -3.08989 )
-layers = 1
-material_override = null
-cast_shadow = 1
-extra_cull_margin = 0.0
-use_in_baked_light = false
-lod_min_distance = 0.0
-lod_min_hysteresis = 0.0
-lod_max_distance = 0.0
-lod_max_hysteresis = 0.0
-mesh = ExtResource( 2 )
-skeleton = NodePath("..")
-material/0 = ExtResource( 3 )
-_sections_unfolded = [ "Transform", "Visibility", "material" ]
-
-[node name="MeshInstance2" type="MeshInstance" parent="." index="2"]
-
 visible = false
 layers = 1
 material_override = null
@@ -42,6 +32,24 @@ lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 4 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Visibility", "material" ]
+
+[node name="MeshInstance2" type="MeshInstance" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 6 )
 skeleton = NodePath("..")
 material/0 = null
 material/1 = null
@@ -69,6 +77,20 @@ material/22 = null
 material/23 = null
 _sections_unfolded = [ "Transform" ]
 
+[node name="MeshInstance" type="MeshInstance" parent="MeshInstance2" index="0"]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = null
+skeleton = NodePath("..")
+
 [node name="SpotLight" type="SpotLight" parent="." index="3"]
 
 transform = Transform( 1, -6.51683e-07, 5.30863e-14, 5.30863e-14, 1.62921e-07, 1, -6.51683e-07, -1, 1.62921e-07, 8.95975, 26.7058, 0 )
@@ -88,7 +110,7 @@ shadow_reverse_cull_face = false
 editor_only = false
 spot_range = 50.0
 spot_attenuation = 0.25
-spot_angle = 46.7
+spot_angle = 60.0
 spot_angle_attenuation = 1.0
 _sections_unfolded = [ "Light", "Shadow", "Spot", "Transform" ]
 
@@ -114,5 +136,25 @@ spot_attenuation = 0.25
 spot_angle = 60.0
 spot_angle_attenuation = 1.0
 _sections_unfolded = [ "Light", "Shadow", "Spot", "Transform" ]
+
+[node name="MeshInstance3" type="MeshInstance" parent="." index="5"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.434974, -1.47516, -4.0727 )
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = ExtResource( 7 )
+skeleton = NodePath("..")
+material/0 = ExtResource( 8 )
+material/1 = ExtResource( 8 )
+material/2 = ExtResource( 8 )
+material/3 = ExtResource( 8 )
+_sections_unfolded = [ "material" ]
 
 

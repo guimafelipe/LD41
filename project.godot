@@ -11,8 +11,8 @@ config_version=3
 [application]
 
 config/name="LD41"
-run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/Menu.tscn"
+config/icon="res://Art/FoodIcons/BurguerSprite3D.png"
 
 [autoload]
 

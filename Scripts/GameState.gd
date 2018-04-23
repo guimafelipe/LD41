@@ -4,8 +4,12 @@ var current_time = 0
 var difficulty = 0
 var difficulty_map #= [20.0, 50.0, 80.0]
 
+var points = 0
+var lost = false
+
 func _ready():
 	difficulty_map = GlobalData.difficulty_map
+	$Points.text = "Score: " + str(points)
 	pass
 
 func _process(delta):
@@ -16,3 +20,6 @@ func _process(delta):
 			new_diff = i
 	assert(difficulty <= GlobalData.max_difficulty)
 	difficulty = new_diff
+	if(current_time - points > 1 and not lost):
+		points+=1
+		$Points.text = "Score: " + str(points)

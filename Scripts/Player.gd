@@ -42,12 +42,13 @@ func _ready():
 	camera_height_center = OS.get_window_size().y / 2
 
 func lookAtAngryCustomer(location):
+	get_node("../GameState").lost = true
 	if(lost):
 		return
 	lost = true
 	print(location)
 	var camera = $Head/Camera
-	camera.rotation.x = 0
+	camera.rotation.x = deg2rad(10)
 	$Head.look_at(location, Vector3(0,1,0));
 
 func _physics_process(delta):
