@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/hotdog.obj-26cb1b6dff797152fdd50de48e032e4d.mesh"
+
+[deps]
+
+files=[ "res://.import/hotdog.obj-26cb1b6dff797152fdd50de48e032e4d.mesh" ]
+
+source_file="res://MeshesNew/hotdog.obj"
+source_md5="32c289a5ab41fbdb08c9a8d0b34b94cc"
+
+dest_files=[ "res://.import/hotdog.obj-26cb1b6dff797152fdd50de48e032e4d.mesh", "res://.import/hotdog.obj-26cb1b6dff797152fdd50de48e032e4d.mesh" ]
+dest_md5="99733ba6087664c11feebe578d77e689"
+
+[params]
+
+generate_tangents=true
