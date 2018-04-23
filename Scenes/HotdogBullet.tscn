@@ -15,6 +15,6 @@ material/1 = null
 
 [node name="CollisionShape" parent="." index="1"]
 
-transform = Transform( 0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0 )
+transform = Transform( 0.7, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 
 

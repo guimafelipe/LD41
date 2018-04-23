@@ -16,4 +16,8 @@ material/1 = null
 material/2 = null
 material/3 = null
 
+[node name="CollisionShape" parent="." index="1"]
+
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.1, 0 )
+
 
