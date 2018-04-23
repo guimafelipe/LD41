@@ -46,15 +46,9 @@ func lookAtAngryCustomer(location):
 		return
 	lost = true
 	print(location)
-	var headT = $Head.transform
-#	var lookDir = location - headT.origin
-#	var rotTransform = headT.looking_at(headT.origin+lookDir, Vector3(0,1,0))
-#	var thisRotation = Quat(rotTransform.basis)
-#	var resTransform = Transform(thisRotation, headT.origin)
-#	$Head.transform = resTransform
-#	$Tween.interpolate_property(self, transform.rotation, transform.rotation, resTransform.rotation, 1.0, Tween.TRANS_SINE,Tween.EASE_IN_OUT)
-	$Head.look_at(location, Vector3(0,1,0))
-#	global_rotate(Vector3(0,1,0), 180)
+	
+	$Head/Camera.rotation.x = 0
+	$Head.look_at(location, Vector3(0,1,0));
 
 func _physics_process(delta):
 	aim()
