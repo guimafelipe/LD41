@@ -8,8 +8,6 @@ var respawnTime
 signal got_free(who)
 
 func _ready():
-	#$Timer.wait_time = maxRespawnTime
-	#$Timer.start()
 	var player = get_node("../../Player")
 	if(player):
 		var player_pos = player.get_global_transform().origin
@@ -23,15 +21,18 @@ func spawnCustomer(difficulty):
 	add_child(myCustomer)
 	myCustomer.connect("wasFeed", self, "customerDestroyed")
 	myCustomer.connect("fedWrong", self, "cstmrFedWrong")
+	myCustomer.connect("lookAtMe", self, "makeLookToCustomer")
 	myCustomer.connect("diedFromHunger", self, "cstmrDiedFromHunger")
 	SoundManager.get_node("./DoorBell").play()
 
+func makeLookToCustomer():
+	if(get_parent()):
+		get_parent().makeLookToCustomer(self.get_global_transform().origin)
+
 func customerDestroyed():
-	#faz alguma coisa com o customer?
 	if(myCustomer):
 		myCustomer.queue_free()
 	myCustomer = null
-	#$Timer.start()
 	emit_signal("got_free", self)
 
 func cstmrFedWrong():

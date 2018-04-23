@@ -75,6 +75,11 @@ func lose_game(state):
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 	pass
 
+func makeLookToCustomer(location):
+	var player = get_node("../Player")
+	if(player):
+		player.lookAtAngryCustomer(location)
+
 func _on_SpawnTimer_timeout():
 	#select a free spanwer to spawn a customer
 	spawn_customer()

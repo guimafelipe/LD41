@@ -62,4 +62,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.585644, -0.612947, -0.99141
 
 [node name="Target" parent="." index="2" instance=ExtResource( 2 )]
 
+[node name="Tween" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 0
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+_sections_unfolded = [ "playback" ]
+
 

@@ -35,16 +35,31 @@ var current_bullet = -1
 
 onready var spawnerClass = preload("res://Scripts/Spawner.gd")
 
+var lost = false
+
 func _ready():
 	camera_width_center = OS.get_window_size().x / 2
 	camera_height_center = OS.get_window_size().y / 2
-	
-	pass
+
+func lookAtAngryCustomer(location):
+	if(lost):
+		return
+	lost = true
+	print(location)
+	var headT = $Head.transform
+#	var lookDir = location - headT.origin
+#	var rotTransform = headT.looking_at(headT.origin+lookDir, Vector3(0,1,0))
+#	var thisRotation = Quat(rotTransform.basis)
+#	var resTransform = Transform(thisRotation, headT.origin)
+#	$Head.transform = resTransform
+#	$Tween.interpolate_property(self, transform.rotation, transform.rotation, resTransform.rotation, 1.0, Tween.TRANS_SINE,Tween.EASE_IN_OUT)
+	$Head.look_at(location, Vector3(0,1,0))
+#	global_rotate(Vector3(0,1,0), 180)
 
 func _physics_process(delta):
 	aim()
 	
-	if shooting > 0:
+	if shooting > 0 and not lost:
 #		fire_bullet()
 		var space_state = get_world().direct_space_state
 		var result = space_state.intersect_ray(shoot_origin, shoot_normal, [self], 1)
@@ -68,7 +83,6 @@ func _physics_process(delta):
 
 func load_placeholder():
 	# check current_bullet value and load correspondent placeholder
-	
 	remove_placeholder()
 	
 	var phld_point = $Head/Camera/PlaceholderPoint
@@ -91,6 +105,8 @@ func _input(event):
 		
 		
 func aim():
+	if lost:
+		return
 	if camera_change.length() > 0:
 		$Head.rotate_y(deg2rad(-camera_change.x * mouse_sensitivity))
 
