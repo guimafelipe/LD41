@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Rosnado.wav-3c9f5b71a9163bef24e235ef59492431.sample"
+
+[deps]
+
+source_file="res://Sounds/Rosnado.wav"
+source_md5="abbdcaf12a2899bca846dcce48159e3b"
+
+dest_files=[ "res://.import/Rosnado.wav-3c9f5b71a9163bef24e235ef59492431.sample" ]
+dest_md5="eb715063d8ee5962db010e16650d3e08"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

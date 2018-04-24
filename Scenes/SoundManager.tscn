@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Sounds/Swoosh.wav" type="AudioStream" id=1]
-[ext_resource path="res://Sounds/Bell.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sounds/David_Szesztay_-_Toy_Shop.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Sounds/Swoosh.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sounds/Bell.wav" type="AudioStream" id=3]
 
 [node name="SoundManager" type="Node"]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." index="0"]
 
-stream = null
-volume_db = 0.0
+stream = ExtResource( 1 )
+volume_db = -15.27
 autoplay = true
 mix_target = 0
 bus = "Master"
@@ -23,7 +24,7 @@ bus = "Master"
 
 [node name="Swoosh" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = ExtResource( 1 )
+stream = ExtResource( 2 )
 volume_db = -15.91
 autoplay = false
 mix_target = 0
@@ -31,7 +32,7 @@ bus = "Master"
 
 [node name="DoorBell" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 2 )
+stream = ExtResource( 3 )
 volume_db = -24.37
 autoplay = false
 mix_target = 0
