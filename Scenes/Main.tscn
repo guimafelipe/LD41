@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/CustomerSpawnerManager.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/CustomerSpawner.tscn" type="PackedScene" id=10]
 
-[node name="Main" type="Spatial" index="0"]
+[node name="Main" type="Spatial"]
 
 script = ExtResource( 1 )
 
@@ -22,6 +22,8 @@ script = ExtResource( 1 )
 transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -1.31523, 1.56003, -14.2009 )
 
 [node name="Restaurante" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
 
 [node name="Table" parent="Restaurante" index="3" instance=ExtResource( 5 )]
 
@@ -77,6 +79,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13793, 2.35279, -16.0032 )
 
 [node name="CustomerSpawnerManager" parent="." index="6" instance=ExtResource( 9 )]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.742969, 0 )
 _sections_unfolded = [ "Transform" ]
 
